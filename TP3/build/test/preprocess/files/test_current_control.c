@@ -1,4 +1,5 @@
 #include "build/temp/_test_current_control.c"
+#include "current_control.h"
 #include "unity.h"
 void setUp(void)
 

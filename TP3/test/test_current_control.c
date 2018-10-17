@@ -8,7 +8,7 @@
 /*--- INCLUDES ---*/
 
 #include "unity.h" /* Allow use assert functions */
-
+#include "current_control.h"
 
 /*--- LOCAL VARIABLES ---*/
 
