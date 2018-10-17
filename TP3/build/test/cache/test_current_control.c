@@ -1,4 +1,5 @@
 #include "build/temp/_test_current_control.c"
+#include "mock_adc.h"
 #include "current_control.h"
 #include "unity.h"
 void setUp(void)
@@ -183,7 +184,7 @@ void test_readCurrentHal(void) {
 
 
 
-    result = current_read_value();
+    result = current_read_value_fun();
 
     UnityAssertEqualNumber((UNITY_INT)(((0))), (UNITY_INT)((result)), (
 
@@ -253,7 +254,9 @@ void test_generateEvents(void) {
 
 
 
+    adc_read_current_CMockIgnoreAndReturn(147, 2);
 
+    adc_read_output_CMockIgnoreAndReturn(148, ADC_OUTPUT_ON);;
 
     current_update_status();
 
@@ -263,7 +266,7 @@ void test_generateEvents(void) {
 
    ((void *)0)
 
-   ), (UNITY_UINT)(150), UNITY_DISPLAY_STYLE_INT);
+   ), (UNITY_UINT)(151), UNITY_DISPLAY_STYLE_INT);
 
 
 
@@ -279,7 +282,7 @@ void test_generateEvents(void) {
 
    ((void *)0)
 
-   ), (UNITY_UINT)(156), UNITY_DISPLAY_STYLE_INT);
+   ), (UNITY_UINT)(157), UNITY_DISPLAY_STYLE_INT);
 
 
 
@@ -295,7 +298,7 @@ void test_generateEvents(void) {
 
    ((void *)0)
 
-   ), (UNITY_UINT)(162), UNITY_DISPLAY_STYLE_INT);
+   ), (UNITY_UINT)(163), UNITY_DISPLAY_STYLE_INT);
 
 
 
@@ -307,11 +310,11 @@ void test_generateEvents(void) {
 
 
 
-    UnityAssertEqualNumber((UNITY_INT)((CUR_STATUS_NORMAL)), (UNITY_INT)((current_get_status())), (
+    UnityAssertEqualNumber((UNITY_INT)((CUR_STATUS_OFF)), (UNITY_INT)((current_get_status())), (
 
    ((void *)0)
 
-   ), (UNITY_UINT)(168), UNITY_DISPLAY_STYLE_INT);
+   ), (UNITY_UINT)(169), UNITY_DISPLAY_STYLE_INT);
 
 
 

@@ -1,4 +1,5 @@
 ---
 - unity.h
 - current_control.h
+- mock_adc.h
 - build/temp/_test_current_control.c

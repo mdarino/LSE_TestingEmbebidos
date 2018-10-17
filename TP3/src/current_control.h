@@ -33,8 +33,9 @@ typedef int8_t curr_error_t;
 /** Type of the possible status of the current module */
 typedef enum
 {
-	CUR_STATUS_NORMAL = 0, /**< Everithing is OK the values read and set are OK */
-	CUR_STATUS_OVERCURRENT = 1 /**< The current is upper than the set */	
+	CUR_STATUS_OFF = 0, /**< It is OFF because the output is OFF */
+	CUR_STATUS_NORMAL = 1, /**< Everithing is OK the values read and set are OK */
+	CUR_STATUS_OVERCURRENT = 2 /**< The current is upper than the set */	
 }curr_status_t;
 
 
@@ -44,7 +45,7 @@ typedef enum
 
 curr_values_t current_get_value(void);
 curr_error_t current_set_value(curr_values_t value);
-curr_error_t current_read_value(void);
+curr_error_t current_read_value_fun(void);
 curr_error_t current_read_output_status(void);
 
 void current_update_status(void);

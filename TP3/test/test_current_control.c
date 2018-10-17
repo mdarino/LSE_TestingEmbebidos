@@ -11,7 +11,7 @@
 
 #include "unity.h" /* Allow use assert functions */
 #include "current_control.h"
-
+#include "mock_adc.h"
 /*------------------------------------------------------------*/
 /* DEFINE */
 /*------------------------------------------------------------*/
@@ -113,7 +113,7 @@ void test_readCurrentHal(void) {
     curr_error_t result;
 
     //adc_read_current_Expect(2); /*Example of read value */
-    result = current_read_value();
+    result = current_read_value_fun();
     TEST_ASSERT_EQUAL(CUR_ERROR_NONE, result);
 }
 
@@ -144,7 +144,8 @@ void test_generateEvents(void) {
     /* Mock of the functions to generate a normal operation */
 
       /*Read current = 4  -> Must be over current */
-
+    adc_read_current_IgnoreAndReturn(2); /*Example of read value */
+    adc_read_output_IgnoreAndReturn(ADC_OUTPUT_ON);; /*Example of read value */
     current_update_status();
 
     TEST_ASSERT_EQUAL(CUR_STATUS_OVERCURRENT, current_get_status());    
@@ -161,10 +162,10 @@ void test_generateEvents(void) {
 
     TEST_ASSERT_EQUAL(CUR_STATUS_OVERCURRENT, current_get_status()); 
 
-      /*Read current = 4 but the output dissable -> Must be normal */
+      /*Read current = 4 but the output dissable -> Must be off */
 
     current_update_status();
 
-    TEST_ASSERT_EQUAL(CUR_STATUS_NORMAL, current_get_status()); 
+    TEST_ASSERT_EQUAL(CUR_STATUS_OFF, current_get_status()); 
 
 }

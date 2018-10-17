@@ -15,21 +15,21 @@
 - :test: test_configureBigNumbers
   :line: 100
   :message: ''
+:failures:
 - :test: test_readCurrentHal
   :line: 112
-  :message: ''
+  :message: Function adc_read_current.  Called more times than expected.
 - :test: test_readOutputStatus
   :line: 123
-  :message: ''
-:failures:
+  :message: Function adc_read_output.  Called more times than expected.
 - :test: test_generateEvents
-  :line: 150
-  :message: Expected 1 Was 0
+  :line: 151
+  :message: Expected 2 Was 0
 :ignores: []
 :counts:
   :total: 7
-  :passed: 6
-  :failed: 1
+  :passed: 4
+  :failed: 3
   :ignored: 0
 :stdout:
 - 'Test 2 Info: Value:1'
@@ -38,4 +38,4 @@
 - 'Test 2 Info: Value:4'
 - 'Test 2 Info: Value:5'
 - 'Test 2 Info: Value:0'
-:time: 0.004196342997602187
+:time: 0.003961501002777368
