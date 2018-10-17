@@ -29,3 +29,12 @@ uint8_t current_get_value(void)
 {
     return current_value;
 }
+
+/**
+ * @brief      Configure the value of the current
+ * @return     Return error code
+ */
+int8_t current_set_value(uint8_t value)
+{
+    
+}
