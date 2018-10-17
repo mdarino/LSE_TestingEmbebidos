@@ -36,6 +36,7 @@ char* GlobalOrderError;
 extern void setUp(void);
 extern void tearDown(void);
 extern void test_initValue(void);
+extern void test_configureDifferentsValues(void);
 
 
 /*=======Suite Setup=====*/
@@ -70,7 +71,8 @@ int main(void)
 {
   suite_setup();
   UnityBegin("test_current_control.c");
-  RUN_TEST(test_initValue, 37);
+  RUN_TEST(test_initValue, 49);
+  RUN_TEST(test_configureDifferentsValues, 62);
 
   return suite_teardown(UnityEnd());
 }

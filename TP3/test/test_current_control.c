@@ -16,6 +16,7 @@
 /* DEFINE */
 /*------------------------------------------------------------*/
 
+
 /*------------------------------------------------------------*/
 /* LOCAL VARIABLES */
 /*------------------------------------------------------------*/
@@ -43,7 +44,7 @@ void tearDown(void)
 }
 
 /**
- * @brief      First test to verify the REQ 1
+ * @brief      Test number 1: Verify the REQ 1, Start in zero
  */
 void test_initValue(void) {
 	uint8_t current_value = CUR_VALUE_INVALID; /* Start the local variable in one imposible value*/
@@ -53,5 +54,14 @@ void test_initValue(void) {
        TEST_ASSERT_EQUAL(0, current_get_value());
        However, the idea is use the function in that way because is more clear.
      */
+}
+
+/**
+ * @brief      Test number 2: Verify the REQ 2, Can set the current value between 0-5
+ */
+void test_configureDifferentsValues(void) {
+	int8_t result = current_set_value(0);
+    TEST_ASSERT_EQUAL(CUR_ERROR_NONE, result);
+    TEST_ASSERT_EQUAL(0, current_get_value());
 }
 
