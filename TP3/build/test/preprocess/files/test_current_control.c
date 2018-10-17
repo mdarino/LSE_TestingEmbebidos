@@ -65,7 +65,7 @@ void test_initValue(void) {
 
 void test_configureDifferentsValues(void) {
 
- int8_t result = current_set_value(0);
+ int8_t result = current_set_value(1);
 
     UnityAssertEqualNumber((UNITY_INT)((0x00)), (UNITY_INT)((result)), (
 
@@ -73,7 +73,7 @@ void test_configureDifferentsValues(void) {
 
    ), (UNITY_UINT)(64), UNITY_DISPLAY_STYLE_INT);
 
-    UnityAssertEqualNumber((UNITY_INT)((0)), (UNITY_INT)((current_get_value())), (
+    UnityAssertEqualNumber((UNITY_INT)((1)), (UNITY_INT)((current_get_value())), (
 
    ((void *)0)
 

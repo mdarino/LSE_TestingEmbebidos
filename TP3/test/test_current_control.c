@@ -60,8 +60,8 @@ void test_initValue(void) {
  * @brief      Test number 2: Verify the REQ 2, Can set the current value between 0-5
  */
 void test_configureDifferentsValues(void) {
-	int8_t result = current_set_value(0);
+	int8_t result = current_set_value(1);
     TEST_ASSERT_EQUAL(CUR_ERROR_NONE, result);
-    TEST_ASSERT_EQUAL(0, current_get_value());
+    TEST_ASSERT_EQUAL(1, current_get_value());
 }
 

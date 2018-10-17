@@ -6,15 +6,15 @@
 - :test: test_initValue
   :line: 49
   :message: ''
+:failures:
 - :test: test_configureDifferentsValues
-  :line: 62
-  :message: ''
-:failures: []
+  :line: 64
+  :message: Expected 0 Was 1
 :ignores: []
 :counts:
   :total: 2
-  :passed: 2
-  :failed: 0
+  :passed: 1
+  :failed: 1
   :ignored: 0
 :stdout: []
-:time: 0.00361445800808724
+:time: 0.003776298006414436
