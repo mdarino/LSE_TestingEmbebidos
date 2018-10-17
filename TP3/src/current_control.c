@@ -97,13 +97,15 @@ curr_error_t current_read_output_status(void)
  */
 void current_update_status(void)
 {
+    current_read_value_fun();
+    current_read_output_status();
     if (read_out == ADC_OUTPUT_OFF)
     {
         status = CUR_STATUS_OFF;
     }
     else
     {
-        if (current_read_value > current_value)
+        if (current_read_value <= current_value)
         {
             status = CUR_STATUS_NORMAL;
         }

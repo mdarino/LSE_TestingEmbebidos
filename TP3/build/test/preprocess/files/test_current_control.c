@@ -182,7 +182,7 @@ void test_readCurrentHal(void) {
 
 
 
-
+    adc_read_current_CMockExpectAndReturn(115, 4);
 
     result = current_read_value_fun();
 
@@ -208,7 +208,7 @@ void test_readOutputStatus(void) {
 
 
 
-
+    adc_read_output_CMockExpectAndReturn(126, ADC_OUTPUT_ON);;
 
     result = current_read_output_status();
 
@@ -254,9 +254,9 @@ void test_generateEvents(void) {
 
 
 
-    adc_read_current_CMockIgnoreAndReturn(147, 2);
+    adc_read_current_CMockExpectAndReturn(147, 4);
 
-    adc_read_output_CMockIgnoreAndReturn(148, ADC_OUTPUT_ON);;
+    adc_read_output_CMockExpectAndReturn(148, ADC_OUTPUT_ON);;
 
     current_update_status();
 
@@ -272,7 +272,9 @@ void test_generateEvents(void) {
 
 
 
+    adc_read_current_CMockExpectAndReturn(154, 2);
 
+    adc_read_output_CMockExpectAndReturn(155, ADC_OUTPUT_ON);;
 
     current_update_status();
 
@@ -282,13 +284,15 @@ void test_generateEvents(void) {
 
    ((void *)0)
 
-   ), (UNITY_UINT)(157), UNITY_DISPLAY_STYLE_INT);
+   ), (UNITY_UINT)(158), UNITY_DISPLAY_STYLE_INT);
 
 
 
 
 
+    adc_read_current_CMockExpectAndReturn(161, 4);
 
+    adc_read_output_CMockExpectAndReturn(162, ADC_OUTPUT_ON);;
 
     current_update_status();
 
@@ -298,13 +302,15 @@ void test_generateEvents(void) {
 
    ((void *)0)
 
-   ), (UNITY_UINT)(163), UNITY_DISPLAY_STYLE_INT);
+   ), (UNITY_UINT)(165), UNITY_DISPLAY_STYLE_INT);
 
 
 
 
 
+    adc_read_current_CMockExpectAndReturn(168, 4);
 
+    adc_read_output_CMockExpectAndReturn(169, ADC_OUTPUT_OFF);;
 
     current_update_status();
 
@@ -314,7 +320,7 @@ void test_generateEvents(void) {
 
    ((void *)0)
 
-   ), (UNITY_UINT)(169), UNITY_DISPLAY_STYLE_INT);
+   ), (UNITY_UINT)(172), UNITY_DISPLAY_STYLE_INT);
 
 
 
