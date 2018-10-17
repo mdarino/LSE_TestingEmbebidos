@@ -177,24 +177,18 @@ void test_configureBigNumbers(void) {
 
 void test_readCurrentHal(void) {
 
-    curr_values_t read_current;
+    curr_error_t result;
 
 
 
 
 
-    read_current = current_read_value();
+    result = current_read_value();
 
-    UnityAssertEqualNumber((UNITY_INT)(((0))), (UNITY_INT)((read_current)), (
+    UnityAssertEqualNumber((UNITY_INT)(((0))), (UNITY_INT)((result)), (
 
    ((void *)0)
 
    ), (UNITY_UINT)(117), UNITY_DISPLAY_STYLE_INT);
-
-    UnityAssertEqualNumber((UNITY_INT)((read_current)), (UNITY_INT)((current_get_read_value())), (
-
-   ((void *)0)
-
-   ), (UNITY_UINT)(118), UNITY_DISPLAY_STYLE_INT);
 
 }

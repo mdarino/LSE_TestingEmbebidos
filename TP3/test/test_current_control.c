@@ -110,10 +110,9 @@ void test_configureBigNumbers(void) {
  * @brief      Test number 5: Verify the REQ 5, Read the current from the HAL
  */
 void test_readCurrentHal(void) {
-    curr_values_t read_current;
+    curr_error_t result;
 
     //adc_read_current_Expect(2); /*Example of read value */
-    read_current = current_read_value();
-    TEST_ASSERT_EQUAL(CUR_ERROR_NONE, read_current);
-    TEST_ASSERT_EQUAL(read_current, current_get_read_value());
+    result = current_read_value();
+    TEST_ASSERT_EQUAL(CUR_ERROR_NONE, result);
 }
