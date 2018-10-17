@@ -35,7 +35,7 @@ void tearDown(void)
 
 void test_initValue(void) {
 
-    uint8_t current_value = 0xFF;
+    curr_values_t current_value = 0xFF;
 
     current_value = current_get_value();
 
@@ -65,7 +65,7 @@ void test_initValue(void) {
 
 void test_configureDifferentsValues(void) {
 
-    int8_t result;
+    curr_error_t result;
 
     char mensaje[64];
 

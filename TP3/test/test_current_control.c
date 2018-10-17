@@ -47,7 +47,7 @@ void tearDown(void)
  * @brief      Test number 1: Verify the REQ 1, Start in zero
  */
 void test_initValue(void) {
-    uint8_t current_value = CUR_VALUE_INVALID; /* Start the local variable in one imposible value*/
+    curr_values_t current_value = CUR_VALUE_INVALID; /* Start the local variable in one imposible value*/
     current_value = current_get_value();
     TEST_ASSERT_EQUAL(0, current_value); 
     /* NOTE: In this test is not necessary the local variable, I think is possible do:
@@ -60,7 +60,7 @@ void test_initValue(void) {
  * @brief      Test number 2: Verify the REQ 2, Can set the current value between 0-5
  */
 void test_configureDifferentsValues(void) {
-    int8_t result;
+    curr_error_t result;
     char mensaje[64];
     uint8_t index;
     for (index = 1; index <= CUR_VALUE_MAX; ++index)

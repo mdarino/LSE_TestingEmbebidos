@@ -15,7 +15,7 @@
 /*------------------------------------------------------------*/
 
 /** Variable to store the current value, local to the file */
-static uint8_t current_value = CUR_VALUE_INIT;
+static curr_values_t current_value = CUR_VALUE_INIT;
 
 /*------------------------------------------------------------*/
 /* FUNCTIONS */
@@ -25,7 +25,7 @@ static uint8_t current_value = CUR_VALUE_INIT;
  * @brief      Return the value of current configuration.
  * @return     Value of the current.
  */
-uint8_t current_get_value(void)
+curr_values_t current_get_value(void)
 {
     return current_value;
 }
@@ -34,7 +34,7 @@ uint8_t current_get_value(void)
  * @brief      Configure the value of the current
  * @return     Return error code
  */
-int8_t current_set_value(uint8_t value)
+curr_error_t current_set_value(curr_values_t value)
 {
     current_value = value; /*We do not perform any validation !! but is the small change needed*/
     return CUR_ERROR_NONE;

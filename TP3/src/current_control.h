@@ -21,10 +21,19 @@
 /* ERROR */
 #define CUR_ERROR_NONE 0x00 /**< Not error */
 
+/*------------------------------------------------------------*/
+/* TYOEDEF */
+/*------------------------------------------------------------*/
+
+/** Type for the current values */
+typedef uint8_t curr_values_t;
+/** Type for the current error */
+typedef int8_t curr_error_t;
+
 
 /*------------------------------------------------------------*/
 /* FUNCTIONS */
 /*------------------------------------------------------------*/
 
-uint8_t current_get_value(void);
-int8_t current_set_value(uint8_t value);
+curr_values_t current_get_value(void);
+curr_error_t current_set_value(curr_values_t value);
