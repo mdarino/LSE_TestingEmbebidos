@@ -86,10 +86,10 @@ void test_configureNegativeValue(void) {
     curr_error_t result;
     /* The first negative binary */
     result = current_set_value(0b10000000);
-    TEST_ASSERT_NOT_EQUAL(CUR_ERROR_NONE, result);
+    TEST_ASSERT_EQUAL(CUR_ERROR_INVALID_VALUE, result);
     TEST_ASSERT_NOT_EQUAL(0b10000000, current_get_value());
     /* The last negative binary */
     result = current_set_value(0b11111111);
-    TEST_ASSERT_NOT_EQUAL(CUR_ERROR_NONE, result);
+    TEST_ASSERT_EQUAL(CUR_ERROR_INVALID_VALUE, result);
     TEST_ASSERT_NOT_EQUAL(0b11111111, current_get_value());
 }

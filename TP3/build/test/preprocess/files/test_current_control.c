@@ -81,7 +81,7 @@ void test_configureDifferentsValues(void) {
 
         result = current_set_value(index);
 
-        UnityAssertEqualNumber((UNITY_INT)(UNITY_INT8 )((0x00)), (UNITY_INT)(UNITY_INT8 )((result)), ((mensaje)), (UNITY_UINT)(71), UNITY_DISPLAY_STYLE_INT8);
+        UnityAssertEqualNumber((UNITY_INT)(UNITY_INT8 )(((0))), (UNITY_INT)(UNITY_INT8 )((result)), ((mensaje)), (UNITY_UINT)(71), UNITY_DISPLAY_STYLE_INT8);
 
         UnityAssertEqualNumber((UNITY_INT)(UNITY_UINT8 )((index)), (UNITY_INT)(UNITY_UINT8 )((current_get_value())), ((mensaje)), (UNITY_UINT)(72), UNITY_DISPLAY_STYLE_UINT8);
 
@@ -95,7 +95,7 @@ void test_configureDifferentsValues(void) {
 
     result = current_set_value(index);
 
-    UnityAssertEqualNumber((UNITY_INT)(UNITY_INT8 )((0x00)), (UNITY_INT)(UNITY_INT8 )((result)), ((mensaje)), (UNITY_UINT)(78), UNITY_DISPLAY_STYLE_INT8);
+    UnityAssertEqualNumber((UNITY_INT)(UNITY_INT8 )(((0))), (UNITY_INT)(UNITY_INT8 )((result)), ((mensaje)), (UNITY_UINT)(78), UNITY_DISPLAY_STYLE_INT8);
 
     UnityAssertEqualNumber((UNITY_INT)(UNITY_UINT8 )((index)), (UNITY_INT)(UNITY_UINT8 )((current_get_value())), ((mensaje)), (UNITY_UINT)(79), UNITY_DISPLAY_STYLE_UINT8);
 
@@ -117,7 +117,11 @@ void test_configureNegativeValue(void) {
 
     result = current_set_value(0b10000000);
 
-    if (((0x00) != (result))) {} else {UnityFail( ((" Expected Not-Equal")), (UNITY_UINT)((UNITY_UINT)(89)));};
+    UnityAssertEqualNumber((UNITY_INT)(((-1))), (UNITY_INT)((result)), (
+
+   ((void *)0)
+
+   ), (UNITY_UINT)(89), UNITY_DISPLAY_STYLE_INT);
 
     if (((0b10000000) != (current_get_value()))) {} else {UnityFail( ((" Expected Not-Equal")), (UNITY_UINT)((UNITY_UINT)(90)));};
 
@@ -125,7 +129,11 @@ void test_configureNegativeValue(void) {
 
     result = current_set_value(0b11111111);
 
-    if (((0x00) != (result))) {} else {UnityFail( ((" Expected Not-Equal")), (UNITY_UINT)((UNITY_UINT)(93)));};
+    UnityAssertEqualNumber((UNITY_INT)(((-1))), (UNITY_INT)((result)), (
+
+   ((void *)0)
+
+   ), (UNITY_UINT)(93), UNITY_DISPLAY_STYLE_INT);
 
     if (((0b11111111) != (current_get_value()))) {} else {UnityFail( ((" Expected Not-Equal")), (UNITY_UINT)((UNITY_UINT)(94)));};
 

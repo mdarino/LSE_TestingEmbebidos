@@ -19,8 +19,8 @@
 #define CUR_VALUE_MAX 0x05 /**< Max current value */
 
 /* ERROR */
-#define CUR_ERROR_NONE 0x00 /**< Not error */
-
+#define CUR_ERROR_NONE          (0) /**< Not error */
+#define CUR_ERROR_INVALID_VALUE (-1) /**< Error when someone try to set an invalid value */
 /*------------------------------------------------------------*/
 /* TYOEDEF */
 /*------------------------------------------------------------*/
