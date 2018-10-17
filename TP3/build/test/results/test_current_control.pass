@@ -1,0 +1,35 @@
+---
+:source:
+  :path: test
+  :file: test_current_control.c
+:successes:
+- :test: test_initValue
+  :line: 49
+  :message: ''
+- :test: test_configureDifferentsValues
+  :line: 62
+  :message: ''
+- :test: test_configureNegativeValue
+  :line: 85
+  :message: ''
+- :test: test_configureBigNumbers
+  :line: 100
+  :message: ''
+- :test: test_readCurrentHal
+  :line: 112
+  :message: ''
+:failures: []
+:ignores: []
+:counts:
+  :total: 5
+  :passed: 5
+  :failed: 0
+  :ignored: 0
+:stdout:
+- 'Test 2 Info: Value:1'
+- 'Test 2 Info: Value:2'
+- 'Test 2 Info: Value:3'
+- 'Test 2 Info: Value:4'
+- 'Test 2 Info: Value:5'
+- 'Test 2 Info: Value:0'
+:time: 0.003823228005785495

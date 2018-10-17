@@ -47,3 +47,12 @@ curr_error_t current_set_value(curr_values_t value)
     }
     return result;
 }
+
+/**
+ * @brief      Read form the HAL the current value
+ * @return     Return error code
+ */
+curr_error_t current_read_value(void)
+{
+    return CUR_ERROR_NONE;
+}
