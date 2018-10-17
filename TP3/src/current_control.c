@@ -36,5 +36,6 @@ uint8_t current_get_value(void)
  */
 int8_t current_set_value(uint8_t value)
 {
-    
+    current_value = value; /*We do not perform any validation !! but is the small change needed*/
+    return CUR_ERROR_NONE;
 }
