@@ -38,6 +38,7 @@ extern void tearDown(void);
 extern void test_initValue(void);
 extern void test_configureDifferentsValues(void);
 extern void test_configureNegativeValue(void);
+extern void test_configureBigNumbers(void);
 
 
 /*=======Suite Setup=====*/
@@ -75,6 +76,7 @@ int main(void)
   RUN_TEST(test_initValue, 49);
   RUN_TEST(test_configureDifferentsValues, 62);
   RUN_TEST(test_configureNegativeValue, 85);
+  RUN_TEST(test_configureBigNumbers, 100);
 
   return suite_teardown(UnityEnd());
 }

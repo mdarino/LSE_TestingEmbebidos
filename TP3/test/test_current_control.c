@@ -93,3 +93,14 @@ void test_configureNegativeValue(void) {
     TEST_ASSERT_EQUAL(CUR_ERROR_INVALID_VALUE, result);
     TEST_ASSERT_NOT_EQUAL(0b11111111, current_get_value());
 }
+
+/**
+ * @brief      Test number 4: Verify the REQ 43, Not number bigger than 5!
+ */
+void test_configureBigNumbers(void) {
+    curr_error_t result;
+    /* Nubmer not supported */
+    result = current_set_value(CUR_VALUE_MAX+1);
+    TEST_ASSERT_EQUAL(CUR_ERROR_INVALID_VALUE, result);
+    TEST_ASSERT_NOT_EQUAL((CUR_VALUE_MAX+1), current_get_value());
+}

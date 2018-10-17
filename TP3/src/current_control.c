@@ -37,7 +37,7 @@ curr_values_t current_get_value(void)
 curr_error_t current_set_value(curr_values_t value)
 {
     curr_error_t result = CUR_ERROR_NONE;
-    if ((value >= 0) && (value <= 5)) /* In this case we add the validation for smaller and bigger because is an uint8, cannot be negative */
+    if ((value >= CUR_VALUE_MIN) && (value <= CUR_VALUE_MAX)) /* In this case we add the validation for smaller and bigger because is an uint8, cannot be negative */
     {
         current_value = value; 
     }

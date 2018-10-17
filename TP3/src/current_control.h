@@ -15,8 +15,9 @@
 /*------------------------------------------------------------*/
 
 #define CUR_VALUE_INVALID 0xFF /**< Invalid current value */
-#define CUR_VALUE_INIT 0x00 /**< Start current value */
 #define CUR_VALUE_MAX 0x05 /**< Max current value */
+#define CUR_VALUE_MIN 0x00 /**< Min current value */
+#define CUR_VALUE_INIT CUR_VALUE_MIN /**< Start current value */
 
 /* ERROR */
 #define CUR_ERROR_NONE          (0) /**< Not error */

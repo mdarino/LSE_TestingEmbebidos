@@ -138,3 +138,29 @@ void test_configureNegativeValue(void) {
     if (((0b11111111) != (current_get_value()))) {} else {UnityFail( ((" Expected Not-Equal")), (UNITY_UINT)((UNITY_UINT)(94)));};
 
 }
+
+
+
+
+
+
+
+
+
+void test_configureBigNumbers(void) {
+
+    curr_error_t result;
+
+
+
+    result = current_set_value(0x05 +1);
+
+    UnityAssertEqualNumber((UNITY_INT)(((-1))), (UNITY_INT)((result)), (
+
+   ((void *)0)
+
+   ), (UNITY_UINT)(104), UNITY_DISPLAY_STYLE_INT);
+
+    if ((((0x05 +1)) != (current_get_value()))) {} else {UnityFail( ((" Expected Not-Equal")), (UNITY_UINT)((UNITY_UINT)(105)));};
+
+}

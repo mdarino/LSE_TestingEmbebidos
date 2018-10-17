@@ -12,11 +12,14 @@
 - :test: test_configureNegativeValue
   :line: 85
   :message: ''
+- :test: test_configureBigNumbers
+  :line: 100
+  :message: ''
 :failures: []
 :ignores: []
 :counts:
-  :total: 3
-  :passed: 3
+  :total: 4
+  :passed: 4
   :failed: 0
   :ignored: 0
 :stdout:
@@ -26,4 +29,4 @@
 - 'Test 2 Info: Value:4'
 - 'Test 2 Info: Value:5'
 - 'Test 2 Info: Value:0'
-:time: 0.003704779999679886
+:time: 0.0037875400012126192
