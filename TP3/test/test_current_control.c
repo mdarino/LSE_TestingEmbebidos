@@ -95,7 +95,7 @@ void test_configureNegativeValue(void) {
 }
 
 /**
- * @brief      Test number 4: Verify the REQ 43, Not number bigger than 5!
+ * @brief      Test number 4: Verify the REQ 4, Not number bigger than 5!
  */
 void test_configureBigNumbers(void) {
     curr_error_t result;
@@ -103,4 +103,17 @@ void test_configureBigNumbers(void) {
     result = current_set_value(CUR_VALUE_MAX+1);
     TEST_ASSERT_EQUAL(CUR_ERROR_INVALID_VALUE, result);
     TEST_ASSERT_NOT_EQUAL((CUR_VALUE_MAX+1), current_get_value());
+}
+
+
+/**
+ * @brief      Test number 5: Verify the REQ 5, Read the current from the HAL
+ */
+void test_readCurrentHal(void) {
+    curr_values_t read_current;
+
+    //adc_read_current_Expect(2); /*Example of read value */
+    read_current = current_read_value();
+    TEST_ASSERT_EQUAL(CUR_ERROR_NONE, read_current);
+    TEST_ASSERT_EQUAL(read_current, current_get_read_value());
 }

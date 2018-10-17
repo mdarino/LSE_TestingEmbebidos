@@ -164,3 +164,37 @@ void test_configureBigNumbers(void) {
     if ((((0x05 +1)) != (current_get_value()))) {} else {UnityFail( ((" Expected Not-Equal")), (UNITY_UINT)((UNITY_UINT)(105)));};
 
 }
+
+
+
+
+
+
+
+
+
+
+
+void test_readCurrentHal(void) {
+
+    curr_values_t read_current;
+
+
+
+
+
+    read_current = current_read_value();
+
+    UnityAssertEqualNumber((UNITY_INT)(((0))), (UNITY_INT)((read_current)), (
+
+   ((void *)0)
+
+   ), (UNITY_UINT)(117), UNITY_DISPLAY_STYLE_INT);
+
+    UnityAssertEqualNumber((UNITY_INT)((read_current)), (UNITY_INT)((current_get_read_value())), (
+
+   ((void *)0)
+
+   ), (UNITY_UINT)(118), UNITY_DISPLAY_STYLE_INT);
+
+}
