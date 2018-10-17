@@ -1,0 +1,947 @@
+t_status’? [-Wimplicit-function-declaration]
+     current_update_status();
+     ^~~~~~~~~~~~~~~~~~~~~
+     current_read_output_status
+In file included from /home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/vendor/unity/src/unity.h:16:0,
+                 from test/test_current_control.c:12:
+test/test_current_control.c:150:47: warning: implicit declaration of function ‘current_get_status’; did you mean ‘current_get_value’? [-Wimplicit-function-declaration]
+     TEST_ASSERT_EQUAL(CUR_STATUS_OVERCURRENT, current_get_status());
+                                               ^
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/vendor/unity/src/unity_internals.h:710:156: note: in definition of macro ‘UNITY_TEST_ASSERT_EQUAL_INT’
+ NT(expected, actual, line, message)                             UnityAssertEqualNumber((UNITY_INT)(expected), (UNITY_INT)(actual), (message), (UNITY_LINE_TYPE)(line), UNITY_DISPLAY_STYLE_INT)
+                                                                                                                           ^~~~~~
+test/test_current_control.c:150:5: note: in expansion of macro ‘TEST_ASSERT_EQUAL’
+     TEST_ASSERT_EQUAL(CUR_STATUS_OVERCURRENT, current_get_status());
+     ^~~~~~~~~~~~~~~~~
+Linking test_current_control.out...
+Running test_current_control.out...
+
+-----------
+TEST OUTPUT
+-----------
+[test_current_control.c]
+  - "Test 2 Info: Value:1"
+  - "Test 2 Info: Value:2"
+  - "Test 2 Info: Value:3"
+  - "Test 2 Info: Value:4"
+  - "Test 2 Info: Value:5"
+  - "Test 2 Info: Value:0"
+
+-------------------
+FAILED TEST SUMMARY
+-------------------
+[test_current_control.c]
+  Test: test_generateEvents
+  At line (150): "Expected 1 Was 0"
+
+--------------------
+OVERALL TEST SUMMARY
+--------------------
+TESTED:  7
+PASSED:  6
+FAILED:  1
+IGNORED: 0
+
+---------------------
+BUILD FAILURE SUMMARY
+---------------------
+Unit test failures.
+
+mdarino@mdarino-MSI-NOTEBOOK-VR630:~/Desktop/TP3/LSE_TestingEmbebidos/TP3$ ceedling test:all
+
+
+Test 'test_current_control.c'
+-----------------------------
+Compiling current_control.c...
+Linking test_current_control.out...
+Running test_current_control.out...
+
+-----------
+TEST OUTPUT
+-----------
+[test_current_control.c]
+  - "Test 2 Info: Value:1"
+  - "Test 2 Info: Value:2"
+  - "Test 2 Info: Value:3"
+  - "Test 2 Info: Value:4"
+  - "Test 2 Info: Value:5"
+  - "Test 2 Info: Value:0"
+
+-------------------
+FAILED TEST SUMMARY
+-------------------
+[test_current_control.c]
+  Test: test_generateEvents
+  At line (150): "Expected 1 Was 0"
+
+--------------------
+OVERALL TEST SUMMARY
+--------------------
+TESTED:  7
+PASSED:  6
+FAILED:  1
+IGNORED: 0
+
+---------------------
+BUILD FAILURE SUMMARY
+---------------------
+Unit test failures.
+
+mdarino@mdarino-MSI-NOTEBOOK-VR630:~/Desktop/TP3/LSE_TestingEmbebidos/TP3$ ceedling test:all
+
+
+Test 'test_current_control.c'
+-----------------------------
+Generating runner for test_current_control.c...
+Compiling test_current_control_runner.c...
+Compiling test_current_control.c...
+In file included from test/test_current_control.c:13:0:
+src/current_control.h:38:2: error: expected ‘,’ or ‘}’ before ‘CUR_STATUS_OVERCURRENT’
+  CUR_STATUS_OVERCURRENT = 2 /**< The current is upper than the set */
+  ^~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/vendor/unity/src/unity.h:16:0,
+                 from test/test_current_control.c:12:
+test/test_current_control.c: In function ‘test_generateEvents’:
+test/test_current_control.c:150:23: error: ‘CUR_STATUS_OVERCURRENT’ undeclared (first use in this function); did you mean ‘CUR_STATUS_NORMAL_ON’?
+     TEST_ASSERT_EQUAL(CUR_STATUS_OVERCURRENT, current_get_status());
+                       ^
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/vendor/unity/src/unity_internals.h:710:133: note: in definition of macro ‘UNITY_TEST_ASSERT_EQUAL_INT’
+ ITY_TEST_ASSERT_EQUAL_INT(expected, actual, line, message)                             UnityAssertEqualNumber((UNITY_INT)(expected), (UNITY_INT)(actual), (message), (UNITY_LINE_TYPE)(line), UNITY_DISPLAY_STYLE_INT)
+                                                                                                                           ^~~~~~~~
+test/test_current_control.c:150:5: note: in expansion of macro ‘TEST_ASSERT_EQUAL’
+     TEST_ASSERT_EQUAL(CUR_STATUS_OVERCURRENT, current_get_status());
+     ^~~~~~~~~~~~~~~~~
+test/test_current_control.c:150:23: note: each undeclared identifier is reported only once for each function it appears in
+     TEST_ASSERT_EQUAL(CUR_STATUS_OVERCURRENT, current_get_status());
+                       ^
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/vendor/unity/src/unity_internals.h:710:133: note: in definition of macro ‘UNITY_TEST_ASSERT_EQUAL_INT’
+ ITY_TEST_ASSERT_EQUAL_INT(expected, actual, line, message)                             UnityAssertEqualNumber((UNITY_INT)(expected), (UNITY_INT)(actual), (message), (UNITY_LINE_TYPE)(line), UNITY_DISPLAY_STYLE_INT)
+                                                                                                                           ^~~~~~~~
+test/test_current_control.c:150:5: note: in expansion of macro ‘TEST_ASSERT_EQUAL’
+     TEST_ASSERT_EQUAL(CUR_STATUS_OVERCURRENT, current_get_status());
+     ^~~~~~~~~~~~~~~~~
+test/test_current_control.c:156:23: error: ‘CUR_STATUS_NORMAL’ undeclared (first use in this function); did you mean ‘CUR_STATUS_NORMAL_ON’?
+     TEST_ASSERT_EQUAL(CUR_STATUS_NORMAL, current_get_status());
+                       ^
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/vendor/unity/src/unity_internals.h:710:133: note: in definition of macro ‘UNITY_TEST_ASSERT_EQUAL_INT’
+ ITY_TEST_ASSERT_EQUAL_INT(expected, actual, line, message)                             UnityAssertEqualNumber((UNITY_INT)(expected), (UNITY_INT)(actual), (message), (UNITY_LINE_TYPE)(line), UNITY_DISPLAY_STYLE_INT)
+                                                                                                                           ^~~~~~~~
+test/test_current_control.c:156:5: note: in expansion of macro ‘TEST_ASSERT_EQUAL’
+     TEST_ASSERT_EQUAL(CUR_STATUS_NORMAL, current_get_status());
+     ^~~~~~~~~~~~~~~~~
+ERROR: Shell command failed.
+> Shell executed command:
+'gcc -I"test" -I"test/support" -I"src" -I"/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/vendor/unity/src" -I"/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/vendor/cmock/src" -I"build/test/mocks" -DTEST -DGNU_COMPILER -g -c "test/test_current_control.c" -o "build/test/out/c/test_current_control.o" -MMD -MF "build/test/dependencies/test_current_control.d"'
+> And exited with status: [1].
+
+#<Thread:0x015d5664@/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/par_map.rb:7 run> terminated with exception (report_on_exception is true):
+Traceback (most recent call last):
+        11: from /home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/par_map.rb:10:in `block (2 levels) in par_map'
+        10: from /home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/task_invoker.rb:80:in `block in invoke_test_objects'
+         9: from /usr/lib/ruby/vendor_ruby/rake/task.rb:182:in `invoke'
+         8: from /usr/lib/ruby/vendor_ruby/rake/task.rb:193:in `invoke_with_call_chain'
+         7: from /usr/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+         6: from /usr/lib/ruby/vendor_ruby/rake/task.rb:213:in `block in invoke_with_call_chain'
+         5: from /usr/lib/ruby/vendor_ruby/rake/task.rb:271:in `execute'
+         4: from /usr/lib/ruby/vendor_ruby/rake/task.rb:271:in `each'
+         3: from /usr/lib/ruby/vendor_ruby/rake/task.rb:271:in `block in execute'
+         2: from /home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/rules_tests.rake:17:in `block in <top (required)>'
+         1: from /home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/generator.rb:96:in `generate_object_file'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/tool_executor.rb:82:in `exec': ShellExecutionException (ShellExecutionException)
+rake aborted!
+ShellExecutionException: ShellExecutionException
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/tool_executor.rb:82:in `exec'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/generator.rb:96:in `generate_object_file'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/rules_tests.rake:17:in `block in <top (required)>'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/task_invoker.rb:80:in `block in invoke_test_objects'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/par_map.rb:10:in `block (2 levels) in par_map'
+Tasks: TOP => build/test/out/c/test_current_control.o
+(See full trace by running task with --trace)
+ERROR: Ceedling Failed
+mdarino@mdarino-MSI-NOTEBOOK-VR630:~/Desktop/TP3/LSE_TestingEmbebidos/TP3$ ceedling test:all
+
+
+Test 'test_current_control.c'
+-----------------------------
+Compiling test_current_control.c...
+In file included from test/test_current_control.c:13:0:
+src/current_control.h:38:2: error: expected ‘,’ or ‘}’ before ‘CUR_STATUS_OVERCURRENT’
+  CUR_STATUS_OVERCURRENT = 2 /**< The current is upper than the set */
+  ^~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/vendor/unity/src/unity.h:16:0,
+                 from test/test_current_control.c:12:
+test/test_current_control.c: In function ‘test_generateEvents’:
+test/test_current_control.c:150:23: error: ‘CUR_STATUS_OVERCURRENT’ undeclared (first use in this function); did you mean ‘CUR_STATUS_NORMAL’?
+     TEST_ASSERT_EQUAL(CUR_STATUS_OVERCURRENT, current_get_status());
+                       ^
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/vendor/unity/src/unity_internals.h:710:133: note: in definition of macro ‘UNITY_TEST_ASSERT_EQUAL_INT’
+ ITY_TEST_ASSERT_EQUAL_INT(expected, actual, line, message)                             UnityAssertEqualNumber((UNITY_INT)(expected), (UNITY_INT)(actual), (message), (UNITY_LINE_TYPE)(line), UNITY_DISPLAY_STYLE_INT)
+                                                                                                                           ^~~~~~~~
+test/test_current_control.c:150:5: note: in expansion of macro ‘TEST_ASSERT_EQUAL’
+     TEST_ASSERT_EQUAL(CUR_STATUS_OVERCURRENT, current_get_status());
+     ^~~~~~~~~~~~~~~~~
+test/test_current_control.c:150:23: note: each undeclared identifier is reported only once for each function it appears in
+     TEST_ASSERT_EQUAL(CUR_STATUS_OVERCURRENT, current_get_status());
+                       ^
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/vendor/unity/src/unity_internals.h:710:133: note: in definition of macro ‘UNITY_TEST_ASSERT_EQUAL_INT’
+ ITY_TEST_ASSERT_EQUAL_INT(expected, actual, line, message)                             UnityAssertEqualNumber((UNITY_INT)(expected), (UNITY_INT)(actual), (message), (UNITY_LINE_TYPE)(line), UNITY_DISPLAY_STYLE_INT)
+                                                                                                                           ^~~~~~~~
+test/test_current_control.c:150:5: note: in expansion of macro ‘TEST_ASSERT_EQUAL’
+     TEST_ASSERT_EQUAL(CUR_STATUS_OVERCURRENT, current_get_status());
+     ^~~~~~~~~~~~~~~~~
+ERROR: Shell command failed.
+> Shell executed command:
+'gcc -I"test" -I"test/support" -I"src" -I"/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/vendor/unity/src" -I"/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/vendor/cmock/src" -I"build/test/mocks" -DTEST -DGNU_COMPILER -g -c "test/test_current_control.c" -o "build/test/out/c/test_current_control.o" -MMD -MF "build/test/dependencies/test_current_control.d"'
+> And exited with status: [1].
+
+#<Thread:0x01dc5248@/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/par_map.rb:7 run> terminated with exception (report_on_exception is true):
+Traceback (most recent call last):
+        11: from /home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/par_map.rb:10:in `block (2 levels) in par_map'
+        10: from /home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/task_invoker.rb:80:in `block in invoke_test_objects'
+         9: from /usr/lib/ruby/vendor_ruby/rake/task.rb:182:in `invoke'
+         8: from /usr/lib/ruby/vendor_ruby/rake/task.rb:193:in `invoke_with_call_chain'
+         7: from /usr/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+         6: from /usr/lib/ruby/vendor_ruby/rake/task.rb:213:in `block in invoke_with_call_chain'
+         5: from /usr/lib/ruby/vendor_ruby/rake/task.rb:271:in `execute'
+         4: from /usr/lib/ruby/vendor_ruby/rake/task.rb:271:in `each'
+         3: from /usr/lib/ruby/vendor_ruby/rake/task.rb:271:in `block in execute'
+         2: from /home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/rules_tests.rake:17:in `block in <top (required)>'
+         1: from /home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/generator.rb:96:in `generate_object_file'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/tool_executor.rb:82:in `exec': ShellExecutionException (ShellExecutionException)
+rake aborted!
+ShellExecutionException: ShellExecutionException
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/tool_executor.rb:82:in `exec'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/generator.rb:96:in `generate_object_file'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/rules_tests.rake:17:in `block in <top (required)>'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/task_invoker.rb:80:in `block in invoke_test_objects'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/par_map.rb:10:in `block (2 levels) in par_map'
+Tasks: TOP => build/test/out/c/test_current_control.o
+(See full trace by running task with --trace)
+ERROR: Ceedling Failed
+mdarino@mdarino-MSI-NOTEBOOK-VR630:~/Desktop/TP3/LSE_TestingEmbebidos/TP3$ ceedling test:all
+
+
+Test 'test_current_control.c'
+-----------------------------
+Compiling test_current_control.c...
+Compiling current_control.c...
+src/current_control.c:22:22: error: ‘current_read_value’ redeclared as different kind of symbol
+ static curr_values_t current_read_value = CUR_VALUE_INIT;
+                      ^~~~~~~~~~~~~~~~~~
+In file included from src/current_control.c:11:0:
+src/current_control.h:48:14: note: previous declaration of ‘current_read_value’ was here
+ curr_error_t current_read_value(void);
+              ^~~~~~~~~~~~~~~~~~
+src/current_control.c:24:8: error: unknown type name ‘adc_output_t’
+ static adc_output_t read_out = ADC_OUTPUT_OFF;
+        ^~~~~~~~~~~~
+src/current_control.c:24:32: error: ‘ADC_OUTPUT_OFF’ undeclared here (not in a function)
+ static adc_output_t read_out = ADC_OUTPUT_OFF;
+                                ^~~~~~~~~~~~~~
+src/current_control.c:60:14: error: ‘current_read_value’ redeclared as different kind of symbol
+ curr_error_t current_read_value(void)
+              ^~~~~~~~~~~~~~~~~~
+src/current_control.c:22:22: note: previous definition of ‘current_read_value’ was here
+ static curr_values_t current_read_value = CUR_VALUE_INIT;
+                      ^~~~~~~~~~~~~~~~~~
+src/current_control.c: In function ‘current_read_value’:
+src/current_control.c:62:28: warning: implicit declaration of function ‘adc_read_current’ [-Wimplicit-function-declaration]
+     uint8_t read_current = adc_read_current();
+                            ^~~~~~~~~~~~~~~~
+src/current_control.c:63:26: error: ‘ADC_MAX_CURRENT’ undeclared (first use in this function)
+     if ((read_current <= ADC_MAX_CURRENT) &&
+                          ^~~~~~~~~~~~~~~
+src/current_control.c:63:26: note: each undeclared identifier is reported only once for each function it appears in
+src/current_control.c:64:26: error: ‘ADC_MIN_CURRENT’ undeclared (first use in this function); did you mean ‘ADC_MAX_CURRENT’?
+         (read_current >= ADC_MIN_CURRENT))
+                          ^~~~~~~~~~~~~~~
+                          ADC_MAX_CURRENT
+src/current_control.c:66:28: error: lvalue required as left operand of assignment
+         current_read_value = read_current;
+                            ^
+src/current_control.c: In function ‘current_read_output_status’:
+src/current_control.c:81:5: error: unknown type name ‘adc_output_t’
+     adc_output_t read_out_tem = adc_read_output();
+     ^~~~~~~~~~~~
+src/current_control.c:81:33: warning: implicit declaration of function ‘adc_read_output’ [-Wimplicit-function-declaration]
+     adc_output_t read_out_tem = adc_read_output();
+                                 ^~~~~~~~~~~~~~~
+src/current_control.c: In function ‘current_update_status’:
+src/current_control.c:106:32: warning: comparison between pointer and integer
+         if (current_read_value > current_value)
+                                ^
+ERROR: Shell command failed.
+> Shell executed command:
+'gcc -I"test" -I"test/support" -I"src" -I"/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/vendor/unity/src" -I"/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/vendor/cmock/src" -I"build/test/mocks" -DTEST -DGNU_COMPILER -g -c "src/current_control.c" -o "build/test/out/c/current_control.o" -MMD -MF "build/test/dependencies/current_control.d"'
+> And exited with status: [1].
+
+#<Thread:0x01dfd328@/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/par_map.rb:7 run> terminated with exception (report_on_exception is true):
+Traceback (most recent call last):
+        11: from /home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/par_map.rb:10:in `block (2 levels) in par_map'
+        10: from /home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/task_invoker.rb:80:in `block in invoke_test_objects'
+         9: from /usr/lib/ruby/vendor_ruby/rake/task.rb:182:in `invoke'
+         8: from /usr/lib/ruby/vendor_ruby/rake/task.rb:193:in `invoke_with_call_chain'
+         7: from /usr/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+         6: from /usr/lib/ruby/vendor_ruby/rake/task.rb:213:in `block in invoke_with_call_chain'
+         5: from /usr/lib/ruby/vendor_ruby/rake/task.rb:271:in `execute'
+         4: from /usr/lib/ruby/vendor_ruby/rake/task.rb:271:in `each'
+         3: from /usr/lib/ruby/vendor_ruby/rake/task.rb:271:in `block in execute'
+         2: from /home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/rules_tests.rake:17:in `block in <top (required)>'
+         1: from /home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/generator.rb:96:in `generate_object_file'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/tool_executor.rb:82:in `exec': ShellExecutionException (ShellExecutionException)
+rake aborted!
+ShellExecutionException: ShellExecutionException
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/tool_executor.rb:82:in `exec'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/generator.rb:96:in `generate_object_file'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/rules_tests.rake:17:in `block in <top (required)>'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/task_invoker.rb:80:in `block in invoke_test_objects'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/par_map.rb:10:in `block (2 levels) in par_map'
+Tasks: TOP => build/test/out/c/current_control.o
+(See full trace by running task with --trace)
+ERROR: Ceedling Failed
+mdarino@mdarino-MSI-NOTEBOOK-VR630:~/Desktop/TP3/LSE_TestingEmbebidos/TP3$ ^C
+mdarino@mdarino-MSI-NOTEBOOK-VR630:~/Desktop/TP3/LSE_TestingEmbebidos/TP3$ ceedling test:all
+
+
+Test 'test_current_control.c'
+-----------------------------
+Generating runner for test_current_control.c...
+Compiling test_current_control_runner.c...
+Compiling test_current_control.c...
+Compiling current_control.c...
+src/current_control.c:24:8: error: unknown type name ‘adc_output_t’
+ static adc_output_t read_out = ADC_OUTPUT_OFF;
+        ^~~~~~~~~~~~
+src/current_control.c:24:32: error: ‘ADC_OUTPUT_OFF’ undeclared here (not in a function)
+ static adc_output_t read_out = ADC_OUTPUT_OFF;
+                                ^~~~~~~~~~~~~~
+src/current_control.c: In function ‘current_read_value_fun’:
+src/current_control.c:62:28: warning: implicit declaration of function ‘adc_read_current’ [-Wimplicit-function-declaration]
+     uint8_t read_current = adc_read_current();
+                            ^~~~~~~~~~~~~~~~
+src/current_control.c:63:26: error: ‘ADC_MAX_CURRENT’ undeclared (first use in this function)
+     if ((read_current <= ADC_MAX_CURRENT) &&
+                          ^~~~~~~~~~~~~~~
+src/current_control.c:63:26: note: each undeclared identifier is reported only once for each function it appears in
+src/current_control.c:64:26: error: ‘ADC_MIN_CURRENT’ undeclared (first use in this function); did you mean ‘ADC_MAX_CURRENT’?
+         (read_current >= ADC_MIN_CURRENT))
+                          ^~~~~~~~~~~~~~~
+                          ADC_MAX_CURRENT
+src/current_control.c: In function ‘current_read_output_status’:
+src/current_control.c:81:5: error: unknown type name ‘adc_output_t’
+     adc_output_t read_out_tem = adc_read_output();
+     ^~~~~~~~~~~~
+src/current_control.c:81:33: warning: implicit declaration of function ‘adc_read_output’ [-Wimplicit-function-declaration]
+     adc_output_t read_out_tem = adc_read_output();
+                                 ^~~~~~~~~~~~~~~
+ERROR: Shell command failed.
+> Shell executed command:
+'gcc -I"test" -I"test/support" -I"src" -I"/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/vendor/unity/src" -I"/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/vendor/cmock/src" -I"build/test/mocks" -DTEST -DGNU_COMPILER -g -c "src/current_control.c" -o "build/test/out/c/current_control.o" -MMD -MF "build/test/dependencies/current_control.d"'
+> And exited with status: [1].
+
+#<Thread:0x01b7d698@/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/par_map.rb:7 run> terminated with exception (report_on_exception is true):
+Traceback (most recent call last):
+        11: from /home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/par_map.rb:10:in `block (2 levels) in par_map'
+        10: from /home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/task_invoker.rb:80:in `block in invoke_test_objects'
+         9: from /usr/lib/ruby/vendor_ruby/rake/task.rb:182:in `invoke'
+         8: from /usr/lib/ruby/vendor_ruby/rake/task.rb:193:in `invoke_with_call_chain'
+         7: from /usr/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+         6: from /usr/lib/ruby/vendor_ruby/rake/task.rb:213:in `block in invoke_with_call_chain'
+         5: from /usr/lib/ruby/vendor_ruby/rake/task.rb:271:in `execute'
+         4: from /usr/lib/ruby/vendor_ruby/rake/task.rb:271:in `each'
+         3: from /usr/lib/ruby/vendor_ruby/rake/task.rb:271:in `block in execute'
+         2: from /home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/rules_tests.rake:17:in `block in <top (required)>'
+         1: from /home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/generator.rb:96:in `generate_object_file'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/tool_executor.rb:82:in `exec': ShellExecutionException (ShellExecutionException)
+rake aborted!
+ShellExecutionException: ShellExecutionException
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/tool_executor.rb:82:in `exec'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/generator.rb:96:in `generate_object_file'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/rules_tests.rake:17:in `block in <top (required)>'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/task_invoker.rb:80:in `block in invoke_test_objects'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/par_map.rb:10:in `block (2 levels) in par_map'
+Tasks: TOP => build/test/out/c/current_control.o
+(See full trace by running task with --trace)
+ERROR: Ceedling Failed
+mdarino@mdarino-MSI-NOTEBOOK-VR630:~/Desktop/TP3/LSE_TestingEmbebidos/TP3$ ceedling test:all
+
+
+Test 'test_current_control.c'
+-----------------------------
+Generating runner for test_current_control.c...
+Compiling test_current_control_runner.c...
+Compiling test_current_control.c...
+Compiling current_control.c...
+src/current_control.c:24:8: error: unknown type name ‘adc_output_t’
+ static adc_output_t read_out = ADC_OUTPUT_OFF;
+        ^~~~~~~~~~~~
+src/current_control.c:24:32: error: ‘ADC_OUTPUT_OFF’ undeclared here (not in a function)
+ static adc_output_t read_out = ADC_OUTPUT_OFF;
+                                ^~~~~~~~~~~~~~
+src/current_control.c: In function ‘current_read_value_fun’:
+src/current_control.c:62:28: warning: implicit declaration of function ‘adc_read_current’ [-Wimplicit-function-declaration]
+     uint8_t read_current = adc_read_current();
+                            ^~~~~~~~~~~~~~~~
+src/current_control.c:63:26: error: ‘ADC_MAX_CURRENT’ undeclared (first use in this function)
+     if ((read_current <= ADC_MAX_CURRENT) &&
+                          ^~~~~~~~~~~~~~~
+src/current_control.c:63:26: note: each undeclared identifier is reported only once for each function it appears in
+src/current_control.c:64:26: error: ‘ADC_MIN_CURRENT’ undeclared (first use in this function); did you mean ‘ADC_MAX_CURRENT’?
+         (read_current >= ADC_MIN_CURRENT))
+                          ^~~~~~~~~~~~~~~
+                          ADC_MAX_CURRENT
+src/current_control.c: In function ‘current_read_output_status’:
+src/current_control.c:81:5: error: unknown type name ‘adc_output_t’
+     adc_output_t read_out_tem = adc_read_output();
+     ^~~~~~~~~~~~
+src/current_control.c:81:33: warning: implicit declaration of function ‘adc_read_output’ [-Wimplicit-function-declaration]
+     adc_output_t read_out_tem = adc_read_output();
+                                 ^~~~~~~~~~~~~~~
+ERROR: Shell command failed.
+> Shell executed command:
+'gcc -I"test" -I"test/support" -I"src" -I"/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/vendor/unity/src" -I"/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/vendor/cmock/src" -I"build/test/mocks" -DTEST -DGNU_COMPILER -g -c "src/current_control.c" -o "build/test/out/c/current_control.o" -MMD -MF "build/test/dependencies/current_control.d"'
+> And exited with status: [1].
+
+#<Thread:0x022db584@/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/par_map.rb:7 run> terminated with exception (report_on_exception is true):
+Traceback (most recent call last):
+        11: from /home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/par_map.rb:10:in `block (2 levels) in par_map'
+        10: from /home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/task_invoker.rb:80:in `block in invoke_test_objects'
+         9: from /usr/lib/ruby/vendor_ruby/rake/task.rb:182:in `invoke'
+         8: from /usr/lib/ruby/vendor_ruby/rake/task.rb:193:in `invoke_with_call_chain'
+         7: from /usr/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+         6: from /usr/lib/ruby/vendor_ruby/rake/task.rb:213:in `block in invoke_with_call_chain'
+         5: from /usr/lib/ruby/vendor_ruby/rake/task.rb:271:in `execute'
+         4: from /usr/lib/ruby/vendor_ruby/rake/task.rb:271:in `each'
+         3: from /usr/lib/ruby/vendor_ruby/rake/task.rb:271:in `block in execute'
+         2: from /home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/rules_tests.rake:17:in `block in <top (required)>'
+         1: from /home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/generator.rb:96:in `generate_object_file'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/tool_executor.rb:82:in `exec': ShellExecutionException (ShellExecutionException)
+rake aborted!
+ShellExecutionException: ShellExecutionException
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/tool_executor.rb:82:in `exec'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/generator.rb:96:in `generate_object_file'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/rules_tests.rake:17:in `block in <top (required)>'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/task_invoker.rb:80:in `block in invoke_test_objects'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/par_map.rb:10:in `block (2 levels) in par_map'
+Tasks: TOP => build/test/out/c/current_control.o
+(See full trace by running task with --trace)
+ERROR: Ceedling Failed
+mdarino@mdarino-MSI-NOTEBOOK-VR630:~/Desktop/TP3/LSE_TestingEmbebidos/TP3$ ceedling test:all
+
+
+Test 'test_current_control.c'
+-----------------------------
+Compiling test_current_control.c...
+Compiling current_control.c...
+Linking test_current_control.out...
+build/test/out/c/current_control.o: In function `current_read_value_fun':
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/src/current_control.c:62: undefined reference to `adc_read_current'
+build/test/out/c/current_control.o: In function `current_read_output_status':
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/src/current_control.c:81: undefined reference to `adc_read_output'
+collect2: error: ld returned 1 exit status
+ERROR: Shell command failed.
+> Shell executed command:
+'gcc "build/test/out/c/test_current_control_runner.o" "build/test/out/c/test_current_control.o" "build/test/out/c/unity.o" "build/test/out/c/current_control.o" "build/test/out/c/cmock.o" -o "build/test/out/test_current_control.out"'
+> And exited with status: [1].
+
+
+NOTICE: If the linker reports missing symbols, the following may be to blame:
+  1. Test lacks #include statements corresponding to needed source files.
+  2. Project search paths do not contain source files corresponding to #include statements in the test.
+  3. Test does not #include needed mocks.
+
+rake aborted!
+
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/generator.rb:144:in `rescue in generate_executable_file'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/generator.rb:129:in `generate_executable_file'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/rules_tests.rake:41:in `block in <top (required)>'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/task_invoker.rb:86:in `invoke_test_results'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/test_invoker.rb:123:in `block in setup_and_invoke'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/test_invoker.rb:63:in `setup_and_invoke'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/tasks_tests.rake:11:in `block (2 levels) in <top (required)>'
+/var/lib/gems/2.5.0/gems/ceedling-0.28.3/bin/ceedling:311:in `block in <top (required)>'
+/var/lib/gems/2.5.0/gems/ceedling-0.28.3/bin/ceedling:298:in `<top (required)>'
+/usr/local/bin/ceedling:23:in `load'
+/usr/local/bin/ceedling:23:in `<main>'
+
+Caused by:
+ShellExecutionException: ShellExecutionException
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/tool_executor.rb:82:in `exec'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/generator.rb:129:in `generate_executable_file'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/rules_tests.rake:41:in `block in <top (required)>'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/task_invoker.rb:86:in `invoke_test_results'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/test_invoker.rb:123:in `block in setup_and_invoke'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/test_invoker.rb:63:in `setup_and_invoke'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/tasks_tests.rake:11:in `block (2 levels) in <top (required)>'
+/var/lib/gems/2.5.0/gems/ceedling-0.28.3/bin/ceedling:311:in `block in <top (required)>'
+/var/lib/gems/2.5.0/gems/ceedling-0.28.3/bin/ceedling:298:in `<top (required)>'
+/usr/local/bin/ceedling:23:in `load'
+/usr/local/bin/ceedling:23:in `<main>'
+Tasks: TOP => build/test/results/test_current_control.pass => build/test/out/test_current_control.out
+(See full trace by running task with --trace)
+ERROR: Ceedling Failed
+mdarino@mdarino-MSI-NOTEBOOK-VR630:~/Desktop/TP3/LSE_TestingEmbebidos/TP3$ ceedling test:all
+
+
+Test 'test_current_control.c'
+-----------------------------
+Linking test_current_control.out...
+build/test/out/c/current_control.o: In function `current_read_value_fun':
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/src/current_control.c:62: undefined reference to `adc_read_current'
+build/test/out/c/current_control.o: In function `current_read_output_status':
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/src/current_control.c:81: undefined reference to `adc_read_output'
+collect2: error: ld returned 1 exit status
+ERROR: Shell command failed.
+> Shell executed command:
+'gcc "build/test/out/c/test_current_control_runner.o" "build/test/out/c/test_current_control.o" "build/test/out/c/unity.o" "build/test/out/c/current_control.o" "build/test/out/c/cmock.o" -o "build/test/out/test_current_control.out"'
+> And exited with status: [1].
+
+
+NOTICE: If the linker reports missing symbols, the following may be to blame:
+  1. Test lacks #include statements corresponding to needed source files.
+  2. Project search paths do not contain source files corresponding to #include statements in the test.
+  3. Test does not #include needed mocks.
+
+rake aborted!
+
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/generator.rb:144:in `rescue in generate_executable_file'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/generator.rb:129:in `generate_executable_file'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/rules_tests.rake:41:in `block in <top (required)>'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/task_invoker.rb:86:in `invoke_test_results'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/test_invoker.rb:123:in `block in setup_and_invoke'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/test_invoker.rb:63:in `setup_and_invoke'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/tasks_tests.rake:11:in `block (2 levels) in <top (required)>'
+/var/lib/gems/2.5.0/gems/ceedling-0.28.3/bin/ceedling:311:in `block in <top (required)>'
+/var/lib/gems/2.5.0/gems/ceedling-0.28.3/bin/ceedling:298:in `<top (required)>'
+/usr/local/bin/ceedling:23:in `load'
+/usr/local/bin/ceedling:23:in `<main>'
+
+Caused by:
+ShellExecutionException: ShellExecutionException
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/tool_executor.rb:82:in `exec'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/generator.rb:129:in `generate_executable_file'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/rules_tests.rake:41:in `block in <top (required)>'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/task_invoker.rb:86:in `invoke_test_results'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/test_invoker.rb:123:in `block in setup_and_invoke'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/test_invoker.rb:63:in `setup_and_invoke'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/tasks_tests.rake:11:in `block (2 levels) in <top (required)>'
+/var/lib/gems/2.5.0/gems/ceedling-0.28.3/bin/ceedling:311:in `block in <top (required)>'
+/var/lib/gems/2.5.0/gems/ceedling-0.28.3/bin/ceedling:298:in `<top (required)>'
+/usr/local/bin/ceedling:23:in `load'
+/usr/local/bin/ceedling:23:in `<main>'
+Tasks: TOP => build/test/results/test_current_control.pass => build/test/out/test_current_control.out
+(See full trace by running task with --trace)
+ERROR: Ceedling Failed
+mdarino@mdarino-MSI-NOTEBOOK-VR630:~/Desktop/TP3/LSE_TestingEmbebidos/TP3$ ceedling test:all
+
+
+Test 'test_current_control.c'
+-----------------------------
+Creating mock for adc...
+Generating runner for test_current_control.c...
+Compiling test_current_control_runner.c...
+Compiling test_current_control.c...
+test/test_current_control.c: In function ‘test_generateEvents’:
+test/test_current_control.c:147:5: warning: implicit declaration of function ‘adc_read_current_Expect’; did you mean ‘adc_read_current’? [-Wimplicit-function-declaration]
+     adc_read_current_Expect(2); /*Example of read value */
+     ^~~~~~~~~~~~~~~~~~~~~~~
+     adc_read_current
+test/test_current_control.c:148:5: warning: implicit declaration of function ‘adc_read_output_Expect’; did you mean ‘adc_read_output’? [-Wimplicit-function-declaration]
+     adc_read_output_Expect(2); /*Example of read value */
+     ^~~~~~~~~~~~~~~~~~~~~~
+     adc_read_output
+Compiling mock_adc.c...
+Linking test_current_control.out...
+build/test/out/c/test_current_control.o: In function `test_generateEvents':
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/test/test_current_control.c:147: undefined reference to `adc_read_current_Expect'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/test/test_current_control.c:148: undefined reference to `adc_read_output_Expect'
+collect2: error: ld returned 1 exit status
+ERROR: Shell command failed.
+> Shell executed command:
+'gcc "build/test/out/c/test_current_control_runner.o" "build/test/out/c/test_current_control.o" "build/test/out/c/mock_adc.o" "build/test/out/c/unity.o" "build/test/out/c/current_control.o" "build/test/out/c/cmock.o" -o "build/test/out/test_current_control.out"'
+> And exited with status: [1].
+
+
+NOTICE: If the linker reports missing symbols, the following may be to blame:
+  1. Test lacks #include statements corresponding to needed source files.
+  2. Project search paths do not contain source files corresponding to #include statements in the test.
+  3. Test does not #include needed mocks.
+
+rake aborted!
+
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/generator.rb:144:in `rescue in generate_executable_file'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/generator.rb:129:in `generate_executable_file'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/rules_tests.rake:41:in `block in <top (required)>'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/task_invoker.rb:86:in `invoke_test_results'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/test_invoker.rb:123:in `block in setup_and_invoke'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/test_invoker.rb:63:in `setup_and_invoke'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/tasks_tests.rake:11:in `block (2 levels) in <top (required)>'
+/var/lib/gems/2.5.0/gems/ceedling-0.28.3/bin/ceedling:311:in `block in <top (required)>'
+/var/lib/gems/2.5.0/gems/ceedling-0.28.3/bin/ceedling:298:in `<top (required)>'
+/usr/local/bin/ceedling:23:in `load'
+/usr/local/bin/ceedling:23:in `<main>'
+
+Caused by:
+ShellExecutionException: ShellExecutionException
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/tool_executor.rb:82:in `exec'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/generator.rb:129:in `generate_executable_file'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/rules_tests.rake:41:in `block in <top (required)>'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/task_invoker.rb:86:in `invoke_test_results'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/test_invoker.rb:123:in `block in setup_and_invoke'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/test_invoker.rb:63:in `setup_and_invoke'
+/home/mdarino/Desktop/TP3/LSE_TestingEmbebidos/TP3/vendor/ceedling/lib/ceedling/tasks_tests.rake:11:in `block (2 levels) in <top (required)>'
+/var/lib/gems/2.5.0/gems/ceedling-0.28.3/bin/ceedling:311:in `block in <top (required)>'
+/var/lib/gems/2.5.0/gems/ceedling-0.28.3/bin/ceedling:298:in `<top (required)>'
+/usr/local/bin/ceedling:23:in `load'
+/usr/local/bin/ceedling:23:in `<main>'
+Tasks: TOP => build/test/results/test_current_control.pass => build/test/out/test_current_control.out
+(See full trace by running task with --trace)
+ERROR: Ceedling Failed
+mdarino@mdarino-MSI-NOTEBOOK-VR630:~/Desktop/TP3/LSE_TestingEmbebidos/TP3$ ceedling test:all
+
+
+Test 'test_current_control.c'
+-----------------------------
+Generating runner for test_current_control.c...
+Compiling test_current_control_runner.c...
+Compiling test_current_control.c...
+Linking test_current_control.out...
+Running test_current_control.out...
+
+-----------
+TEST OUTPUT
+-----------
+[test_current_control.c]
+  - "Test 2 Info: Value:1"
+  - "Test 2 Info: Value:2"
+  - "Test 2 Info: Value:3"
+  - "Test 2 Info: Value:4"
+  - "Test 2 Info: Value:5"
+  - "Test 2 Info: Value:0"
+
+-------------------
+FAILED TEST SUMMARY
+-------------------
+[test_current_control.c]
+  Test: test_readCurrentHal
+  At line (112): "Function adc_read_current.  Called more times than expected."
+
+  Test: test_readOutputStatus
+  At line (123): "Function adc_read_output.  Called more times than expected."
+
+  Test: test_generateEvents
+  At line (151): "Expected 2 Was 0"
+
+--------------------
+OVERALL TEST SUMMARY
+--------------------
+TESTED:  7
+PASSED:  4
+FAILED:  3
+IGNORED: 0
+
+---------------------
+BUILD FAILURE SUMMARY
+---------------------
+Unit test failures.
+
+mdarino@mdarino-MSI-NOTEBOOK-VR630:~/Desktop/TP3/LSE_TestingEmbebidos/TP3$ ceedling test:all
+
+
+Test 'test_current_control.c'
+-----------------------------
+Generating runner for test_current_control.c...
+Compiling test_current_control_runner.c...
+Compiling test_current_control.c...
+Linking test_current_control.out...
+Running test_current_control.out...
+
+-----------
+TEST OUTPUT
+-----------
+[test_current_control.c]
+  - "Test 2 Info: Value:1"
+  - "Test 2 Info: Value:2"
+  - "Test 2 Info: Value:3"
+  - "Test 2 Info: Value:4"
+  - "Test 2 Info: Value:5"
+  - "Test 2 Info: Value:0"
+
+-------------------
+FAILED TEST SUMMARY
+-------------------
+[test_current_control.c]
+  Test: test_readCurrentHal
+  At line (112): "Function adc_read_current.  Called more times than expected."
+
+  Test: test_readOutputStatus
+  At line (123): "Function adc_read_output.  Called more times than expected."
+
+  Test: test_generateEvents
+  At line (151): "Expected 2 Was 0"
+
+--------------------
+OVERALL TEST SUMMARY
+--------------------
+TESTED:  7
+PASSED:  4
+FAILED:  3
+IGNORED: 0
+
+---------------------
+BUILD FAILURE SUMMARY
+---------------------
+Unit test failures.
+
+mdarino@mdarino-MSI-NOTEBOOK-VR630:~/Desktop/TP3/LSE_TestingEmbebidos/TP3$ ceedling test:all
+
+
+Test 'test_current_control.c'
+-----------------------------
+Compiling test_current_control.c...
+Linking test_current_control.out...
+Running test_current_control.out...
+
+-----------
+TEST OUTPUT
+-----------
+[test_current_control.c]
+  - "Test 2 Info: Value:1"
+  - "Test 2 Info: Value:2"
+  - "Test 2 Info: Value:3"
+  - "Test 2 Info: Value:4"
+  - "Test 2 Info: Value:5"
+  - "Test 2 Info: Value:0"
+
+-------------------
+FAILED TEST SUMMARY
+-------------------
+[test_current_control.c]
+  Test: test_readCurrentHal
+  At line (112): "Function adc_read_current.  Called more times than expected."
+
+  Test: test_readOutputStatus
+  At line (123): "Function adc_read_output.  Called more times than expected."
+
+  Test: test_generateEvents
+  At line (151): "Expected 2 Was 0"
+
+--------------------
+OVERALL TEST SUMMARY
+--------------------
+TESTED:  7
+PASSED:  4
+FAILED:  3
+IGNORED: 0
+
+---------------------
+BUILD FAILURE SUMMARY
+---------------------
+Unit test failures.
+
+mdarino@mdarino-MSI-NOTEBOOK-VR630:~/Desktop/TP3/LSE_TestingEmbebidos/TP3$ ceedling test:all
+
+
+Test 'test_current_control.c'
+-----------------------------
+Generating runner for test_current_control.c...
+Compiling test_current_control_runner.c...
+Compiling test_current_control.c...
+Linking test_current_control.out...
+Running test_current_control.out...
+
+-----------
+TEST OUTPUT
+-----------
+[test_current_control.c]
+  - "Test 2 Info: Value:1"
+  - "Test 2 Info: Value:2"
+  - "Test 2 Info: Value:3"
+  - "Test 2 Info: Value:4"
+  - "Test 2 Info: Value:5"
+  - "Test 2 Info: Value:0"
+
+-------------------
+FAILED TEST SUMMARY
+-------------------
+[test_current_control.c]
+  Test: test_readCurrentHal
+  At line (112): "Function adc_read_current.  Called more times than expected."
+
+  Test: test_readOutputStatus
+  At line (123): "Function adc_read_output.  Called more times than expected."
+
+  Test: test_generateEvents
+  At line (151): "Expected 2 Was 0"
+
+--------------------
+OVERALL TEST SUMMARY
+--------------------
+TESTED:  7
+PASSED:  4
+FAILED:  3
+IGNORED: 0
+
+---------------------
+BUILD FAILURE SUMMARY
+---------------------
+Unit test failures.
+
+mdarino@mdarino-MSI-NOTEBOOK-VR630:~/Desktop/TP3/LSE_TestingEmbebidos/TP3$ ceedling test:all
+
+
+Test 'test_current_control.c'
+-----------------------------
+Compiling test_current_control.c...
+Compiling current_control.c...
+Linking test_current_control.out...
+Running test_current_control.out...
+
+-----------
+TEST OUTPUT
+-----------
+[test_current_control.c]
+  - "Test 2 Info: Value:1"
+  - "Test 2 Info: Value:2"
+  - "Test 2 Info: Value:3"
+  - "Test 2 Info: Value:4"
+  - "Test 2 Info: Value:5"
+  - "Test 2 Info: Value:0"
+
+-------------------
+FAILED TEST SUMMARY
+-------------------
+[test_current_control.c]
+  Test: test_readCurrentHal
+  At line (112): "Function adc_read_current.  Called more times than expected."
+
+  Test: test_readOutputStatus
+  At line (123): "Function adc_read_output.  Called more times than expected."
+
+  Test: test_generateEvents
+  At line (151): "Expected 2 Was 0"
+
+--------------------
+OVERALL TEST SUMMARY
+--------------------
+TESTED:  7
+PASSED:  4
+FAILED:  3
+IGNORED: 0
+
+---------------------
+BUILD FAILURE SUMMARY
+---------------------
+Unit test failures.
+
+mdarino@mdarino-MSI-NOTEBOOK-VR630:~/Desktop/TP3/LSE_TestingEmbebidos/TP3$ ceedling test:all
+
+
+Test 'test_current_control.c'
+-----------------------------
+Generating runner for test_current_control.c...
+Compiling test_current_control_runner.c...
+Compiling test_current_control.c...
+Linking test_current_control.out...
+Running test_current_control.out...
+
+-----------
+TEST OUTPUT
+-----------
+[test_current_control.c]
+  - "Test 2 Info: Value:1"
+  - "Test 2 Info: Value:2"
+  - "Test 2 Info: Value:3"
+  - "Test 2 Info: Value:4"
+  - "Test 2 Info: Value:5"
+  - "Test 2 Info: Value:0"
+
+-------------------
+FAILED TEST SUMMARY
+-------------------
+[test_current_control.c]
+  Test: test_generateEvents
+  At line (151): "Expected 2 Was 1"
+
+--------------------
+OVERALL TEST SUMMARY
+--------------------
+TESTED:  7
+PASSED:  6
+FAILED:  1
+IGNORED: 0
+
+---------------------
+BUILD FAILURE SUMMARY
+---------------------
+Unit test failures.
+
+mdarino@mdarino-MSI-NOTEBOOK-VR630:~/Desktop/TP3/LSE_TestingEmbebidos/TP3$ ceedling test:all
+
+
+Test 'test_current_control.c'
+-----------------------------
+Compiling current_control.c...
+Linking test_current_control.out...
+Running test_current_control.out...
+
+-----------
+TEST OUTPUT
+-----------
+[test_current_control.c]
+  - "Test 2 Info: Value:1"
+  - "Test 2 Info: Value:2"
+  - "Test 2 Info: Value:3"
+  - "Test 2 Info: Value:4"
+  - "Test 2 Info: Value:5"
+  - "Test 2 Info: Value:0"
+
+-------------------
+FAILED TEST SUMMARY
+-------------------
+[test_current_control.c]
+  Test: test_generateEvents
+  At line (151): "Expected 2 Was 1"
+
+--------------------
+OVERALL TEST SUMMARY
+--------------------
+TESTED:  7
+PASSED:  6
+FAILED:  1
+IGNORED: 0
+
+---------------------
+BUILD FAILURE SUMMARY
+---------------------
+Unit test failures.
+
+mdarino@mdarino-MSI-NOTEBOOK-VR630:~/Desktop/TP3/LSE_TestingEmbebidos/TP3$ ceedling test:all
+
+
+Test 'test_current_control.c'
+-----------------------------
+Compiling current_control.c...
+Linking test_current_control.out...
+Running test_current_control.out...
+
+-----------
+TEST OUTPUT
+-----------
+[test_current_control.c]
+  - "Test 2 Info: Value:1"
+  - "Test 2 Info: Value:2"
+  - "Test 2 Info: Value:3"
+  - "Test 2 Info: Value:4"
+  - "Test 2 Info: Value:5"
+  - "Test 2 Info: Value:0"
+
+--------------------
+OVERALL TEST SUMMARY
+--------------------
+TESTED:  7
+PASSED:  7
+FAILED:  0
+IGNORED: 0
+
+mdarino@mdarino-MSI-NOTEBOOK-VR630:~/Desktop/TP3/LSE_TestingEmbebidos/TP3$ 
