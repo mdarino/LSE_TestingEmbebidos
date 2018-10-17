@@ -192,3 +192,71 @@ void test_readCurrentHal(void) {
    ), (UNITY_UINT)(117), UNITY_DISPLAY_STYLE_INT);
 
 }
+
+
+
+
+
+
+
+
+
+void test_readOutputStatus(void) {
+
+    curr_error_t result;
+
+
+
+
+
+    result = current_read_output_status();
+
+    UnityAssertEqualNumber((UNITY_INT)(((0))), (UNITY_INT)((result)), (
+
+   ((void *)0)
+
+   ), (UNITY_UINT)(128), UNITY_DISPLAY_STYLE_INT);
+
+}
+
+
+
+
+
+
+
+
+
+void test_generateEvents(void) {
+
+
+
+
+
+
+
+
+
+
+
+    curr_status_t status;
+
+
+
+
+
+    current_set_value(3);
+
+    current_update_status();
+
+
+
+    UnityAssertEqualNumber((UNITY_INT)((CUR_STATUS_NORMAL)), (UNITY_INT)((current_get_status())), (
+
+   ((void *)0)
+
+   ), (UNITY_UINT)(146), UNITY_DISPLAY_STYLE_INT);
+
+
+
+}

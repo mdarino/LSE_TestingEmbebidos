@@ -116,3 +116,33 @@ void test_readCurrentHal(void) {
     result = current_read_value();
     TEST_ASSERT_EQUAL(CUR_ERROR_NONE, result);
 }
+
+/**
+ * @brief      Test number 6: Verify the REQ 6, Read the output status
+ */
+void test_readOutputStatus(void) {
+    curr_error_t result;
+
+    //adc_read_current_Expect(2); /*Example of read value */
+    result = current_read_output_status();
+    TEST_ASSERT_EQUAL(CUR_ERROR_NONE, result);
+}
+
+/**
+ * @brief      Test number 7: Verify the REQ 7 and 8, generate event if something is wrong
+ */
+void test_generateEvents(void) {
+    
+    /* The module will have a funtion to update and chech the status of the current this function in the 
+     * real code is called x time per second, maybe is not the best implementation but allow me use and leard 
+     * how to use mock fuctions */
+
+    curr_status_t status;
+
+    /* Mock of the functions to generate a normal operation */
+    current_set_value(3); /* Set and example current value */
+    current_update_status();
+
+    TEST_ASSERT_EQUAL(CUR_STATUS_NORMAL, current_get_status());    
+
+}

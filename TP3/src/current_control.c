@@ -16,7 +16,8 @@
 
 /** Variable to store the current value, local to the file */
 static curr_values_t current_value = CUR_VALUE_INIT;
-
+/** Variable to store the current module status */
+static curr_status_t status = CUR_STATUS_NORMAL;
 /*------------------------------------------------------------*/
 /* FUNCTIONS */
 /*------------------------------------------------------------*/
@@ -55,4 +56,31 @@ curr_error_t current_set_value(curr_values_t value)
 curr_error_t current_read_value(void)
 {
     return CUR_ERROR_NONE;
+}
+
+/**
+ * @brief      Read the output status
+ * @return     Return error code
+ */
+curr_error_t current_read_output_status(void)
+{
+    return CUR_ERROR_NONE;
+}
+
+
+/**
+ * @brief      Update and validate the status, usign the read value vs set value
+ * @return     Return error code
+ */
+void current_update_status(void)
+{
+    status = CUR_STATUS_NORMAL;
+}
+/**
+ * @brief      Return the status of the current module
+ * @return     Return the status of the module
+ */
+curr_status_t current_get_status(void)
+{
+    return status;
 }
