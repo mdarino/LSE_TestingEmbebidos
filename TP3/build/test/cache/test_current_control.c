@@ -100,3 +100,33 @@ void test_configureDifferentsValues(void) {
     UnityAssertEqualNumber((UNITY_INT)(UNITY_UINT8 )((index)), (UNITY_INT)(UNITY_UINT8 )((current_get_value())), ((mensaje)), (UNITY_UINT)(79), UNITY_DISPLAY_STYLE_UINT8);
 
 }
+
+
+
+
+
+
+
+
+
+void test_configureNegativeValue(void) {
+
+    curr_error_t result;
+
+
+
+    result = current_set_value(0b10000000);
+
+    if (((0x00) != (result))) {} else {UnityFail( ((" Expected Not-Equal")), (UNITY_UINT)((UNITY_UINT)(89)));};
+
+    if (((0b10000000) != (current_get_value()))) {} else {UnityFail( ((" Expected Not-Equal")), (UNITY_UINT)((UNITY_UINT)(90)));};
+
+
+
+    result = current_set_value(0b11111111);
+
+    if (((0x00) != (result))) {} else {UnityFail( ((" Expected Not-Equal")), (UNITY_UINT)((UNITY_UINT)(93)));};
+
+    if (((0b11111111) != (current_get_value()))) {} else {UnityFail( ((" Expected Not-Equal")), (UNITY_UINT)((UNITY_UINT)(94)));};
+
+}

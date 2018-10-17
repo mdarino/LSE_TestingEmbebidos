@@ -9,12 +9,15 @@
 - :test: test_configureDifferentsValues
   :line: 62
   :message: ''
-:failures: []
+:failures:
+- :test: test_configureNegativeValue
+  :line: 89
+  :message: Expected Not-Equal
 :ignores: []
 :counts:
-  :total: 2
+  :total: 3
   :passed: 2
-  :failed: 0
+  :failed: 1
   :ignored: 0
 :stdout:
 - 'Test 2 Info: Value:1'
@@ -23,4 +26,4 @@
 - 'Test 2 Info: Value:4'
 - 'Test 2 Info: Value:5'
 - 'Test 2 Info: Value:0'
-:time: 0.0038564190035685897
+:time: 0.003786460991250351
