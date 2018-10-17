@@ -9,7 +9,7 @@
 #include "current_control.h"
 
 /*--- LOCAL VARIABLES ---*/
-
+static uint8_t current_value = 0;
 
 /*--- FUNCTIONS---*/
 
@@ -19,5 +19,5 @@
  */
 uint8_t current_get_value(void)
 {
-    return 1; /* Return 1 because is the default of true - the test will fail, but will be solve in the next round*/
+    return current_value;
 }
