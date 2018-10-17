@@ -19,5 +19,5 @@
  */
 uint8_t current_get_value(void)
 {
-
+    return 1; /* Return 1 because is the default of true - the test will fail, but will be solve in the next round*/
 }
