@@ -70,7 +70,7 @@ int main(void)
 {
   suite_setup();
   UnityBegin("test_current_control.c");
-  RUN_TEST(test_initValue, 34);
+  RUN_TEST(test_initValue, 37);
 
   return suite_teardown(UnityEnd());
 }
