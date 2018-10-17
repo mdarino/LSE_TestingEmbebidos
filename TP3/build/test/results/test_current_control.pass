@@ -16,5 +16,11 @@
   :passed: 2
   :failed: 0
   :ignored: 0
-:stdout: []
-:time: 0.0038945420092204586
+:stdout:
+- 'Test 2 Info: Value:1'
+- 'Test 2 Info: Value:2'
+- 'Test 2 Info: Value:3'
+- 'Test 2 Info: Value:4'
+- 'Test 2 Info: Value:5'
+- 'Test 2 Info: Value:0'
+:time: 0.00381245999597013
