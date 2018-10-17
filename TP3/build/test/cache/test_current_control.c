@@ -243,9 +243,33 @@ void test_generateEvents(void) {
 
 
 
-
-
     current_set_value(3);
+
+
+
+
+
+
+
+
+
+
+
+    current_update_status();
+
+
+
+    UnityAssertEqualNumber((UNITY_INT)((CUR_STATUS_OVERCURRENT)), (UNITY_INT)((current_get_status())), (
+
+   ((void *)0)
+
+   ), (UNITY_UINT)(150), UNITY_DISPLAY_STYLE_INT);
+
+
+
+
+
+
 
     current_update_status();
 
@@ -255,7 +279,39 @@ void test_generateEvents(void) {
 
    ((void *)0)
 
-   ), (UNITY_UINT)(146), UNITY_DISPLAY_STYLE_INT);
+   ), (UNITY_UINT)(156), UNITY_DISPLAY_STYLE_INT);
+
+
+
+
+
+
+
+    current_update_status();
+
+
+
+    UnityAssertEqualNumber((UNITY_INT)((CUR_STATUS_OVERCURRENT)), (UNITY_INT)((current_get_status())), (
+
+   ((void *)0)
+
+   ), (UNITY_UINT)(162), UNITY_DISPLAY_STYLE_INT);
+
+
+
+
+
+
+
+    current_update_status();
+
+
+
+    UnityAssertEqualNumber((UNITY_INT)((CUR_STATUS_NORMAL)), (UNITY_INT)((current_get_status())), (
+
+   ((void *)0)
+
+   ), (UNITY_UINT)(168), UNITY_DISPLAY_STYLE_INT);
 
 
 

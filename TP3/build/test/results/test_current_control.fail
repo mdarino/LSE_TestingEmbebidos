@@ -21,15 +21,15 @@
 - :test: test_readOutputStatus
   :line: 123
   :message: ''
+:failures:
 - :test: test_generateEvents
-  :line: 134
-  :message: ''
-:failures: []
+  :line: 150
+  :message: Expected 1 Was 0
 :ignores: []
 :counts:
   :total: 7
-  :passed: 7
-  :failed: 0
+  :passed: 6
+  :failed: 1
   :ignored: 0
 :stdout:
 - 'Test 2 Info: Value:1'
@@ -38,4 +38,4 @@
 - 'Test 2 Info: Value:4'
 - 'Test 2 Info: Value:5'
 - 'Test 2 Info: Value:0'
-:time: 0.00320477900095284
+:time: 0.004196342997602187

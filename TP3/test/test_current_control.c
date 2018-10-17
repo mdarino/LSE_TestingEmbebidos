@@ -139,10 +139,32 @@ void test_generateEvents(void) {
 
     curr_status_t status;
 
-    /* Mock of the functions to generate a normal operation */
     current_set_value(3); /* Set and example current value */
+    
+    /* Mock of the functions to generate a normal operation */
+
+      /*Read current = 4  -> Must be over current */
+
+    current_update_status();
+
+    TEST_ASSERT_EQUAL(CUR_STATUS_OVERCURRENT, current_get_status());    
+
+      /*Read current = 2  -> Must be Normal */
+
     current_update_status();
 
     TEST_ASSERT_EQUAL(CUR_STATUS_NORMAL, current_get_status());    
+
+      /*Read current = 4  -> Must be over current */
+
+    current_update_status();
+
+    TEST_ASSERT_EQUAL(CUR_STATUS_OVERCURRENT, current_get_status()); 
+
+      /*Read current = 4 but the output dissable -> Must be normal */
+
+    current_update_status();
+
+    TEST_ASSERT_EQUAL(CUR_STATUS_NORMAL, current_get_status()); 
 
 }

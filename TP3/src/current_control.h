@@ -46,3 +46,6 @@ curr_values_t current_get_value(void);
 curr_error_t current_set_value(curr_values_t value);
 curr_error_t current_read_value(void);
 curr_error_t current_read_output_status(void);
+
+void current_update_status(void);
+curr_status_t current_get_status(void);
