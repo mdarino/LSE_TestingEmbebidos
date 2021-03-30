@@ -1,6 +1,8 @@
 # LSE_TestingEmbebidos
 Repositorio para guardar el TP3 de Especializacion en Sistemas Embebios - Materia Testing de sistemas embebidos.
 
+Laboratorio de sistemas embebidos ([link](http://laboratorios.fi.uba.ar/lse/))
+Facultad de Ingeniería ([link](http://www.fi.uba.ar/)) Universidad de Buenos Aires
 Modulo seleccionado para trabajar en el TP3
 
 - Modulo de control de corriente
